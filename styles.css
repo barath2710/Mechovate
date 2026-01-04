@@ -2009,34 +2009,34 @@ header {
     }
 
     .timeline-time {
-        width: 100%;
-        font-size: 1rem;
-        font-weight: 900;
-        padding: 0.75rem 1rem;
-        margin: 0;
-        margin-bottom: 0;
-        text-align: left;
+        width: 100% !important;
+        font-size: 1rem !important;
+        font-weight: 900 !important;
+        padding: 0.75rem 1rem !important;
+        margin: 0 !important;
+        margin-bottom: 0 !important;
+        text-align: left !important;
         color: #ffffff !important;
         background: linear-gradient(135deg, #0066cc, #0088ff) !important;
-        border: none;
-        border-bottom: 3px solid #00ffff;
-        border-radius: 8px 8px 0 0;
+        border: none !important;
+        border-bottom: 3px solid #00ffff !important;
+        border-radius: 8px 8px 0 0 !important;
         display: block !important;
         visibility: visible !important;
         opacity: 1 !important;
         position: relative !important;
         overflow: visible !important;
-        white-space: normal;
-        word-wrap: break-word;
-        text-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 255, 255, 0.6);
-        box-shadow: 0 2px 8px rgba(0, 191, 255, 0.4);
-        order: 1;
-        line-height: 1.5;
-        min-height: auto;
-        height: auto;
-        letter-spacing: 0.5px;
-        z-index: 10;
-        font-family: Arial, sans-serif;
+        white-space: normal !important;
+        word-wrap: break-word !important;
+        text-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 255, 255, 0.6) !important;
+        box-shadow: 0 2px 8px rgba(0, 191, 255, 0.4) !important;
+        order: 1 !important;
+        line-height: 1.5 !important;
+        min-height: 3rem !important;
+        height: auto !important;
+        letter-spacing: 0.5px !important;
+        z-index: 10 !important;
+        font-family: Arial, sans-serif !important;
     }
 
     .timeline-content {
@@ -2113,37 +2113,37 @@ header {
     }
 
     .timeline-time {
-        width: 100%;
-        font-size: 0.95rem;
-        font-weight: 900;
-        padding: 0.7rem 0.9rem;
-        margin: 0;
-        margin-bottom: 0;
-        text-align: left;
+        width: 100% !important;
+        font-size: 0.95rem !important;
+        font-weight: 900 !important;
+        padding: 0.7rem 0.9rem !important;
+        margin: 0 !important;
+        margin-bottom: 0 !important;
+        text-align: left !important;
         color: #ffffff !important;
         background: linear-gradient(135deg, #0066cc, #0088ff) !important;
-        border: none;
-        border-bottom: 3px solid #00ffff;
-        border-radius: 8px 8px 0 0;
+        border: none !important;
+        border-bottom: 3px solid #00ffff !important;
+        border-radius: 8px 8px 0 0 !important;
         display: block !important;
         visibility: visible !important;
         opacity: 1 !important;
         position: relative !important;
         overflow: visible !important;
-        white-space: normal;
-        word-wrap: break-word;
-        text-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 255, 255, 0.6);
-        box-shadow: 0 2px 8px rgba(0, 191, 255, 0.4);
-        order: 1;
-        line-height: 1.5;
-        min-height: auto;
-        height: auto;
-        letter-spacing: 0.5px;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        z-index: 10;
-        font-family: Arial, sans-serif;
+        white-space: normal !important;
+        word-wrap: break-word !important;
+        text-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 255, 255, 0.6) !important;
+        box-shadow: 0 2px 8px rgba(0, 191, 255, 0.4) !important;
+        order: 1 !important;
+        line-height: 1.5 !important;
+        min-height: 2.8rem !important;
+        height: auto !important;
+        letter-spacing: 0.5px !important;
+        text-rendering: optimizeLegibility !important;
+        -webkit-font-smoothing: antialiased !important;
+        -moz-osx-font-smoothing: grayscale !important;
+        z-index: 10 !important;
+        font-family: Arial, sans-serif !important;
     }
 
     .timeline-content {
