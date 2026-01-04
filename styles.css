@@ -89,7 +89,7 @@ body {
     background: #0a1128;
     color: white;
     min-height: 100vh;
-    padding: 80px 20px 0 20px;
+    padding: 80px 1rem 0 1rem;
     position: relative;
     overflow-x: hidden;
     line-height: 1.7;
@@ -7185,4 +7185,815 @@ select:hover,
     object-fit: contain;
     display: block;
     margin: 0;
+}
+
+/* ================================================
+   MOBILE-FIRST RESPONSIVE DESIGN - COMPREHENSIVE FIX
+   ================================================ */
+
+@media (max-width: 768px) {
+    /* Global Mobile Adjustments */
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        padding: 80px 1rem 0 1rem;
+        overflow-x: hidden;
+    }
+
+    /* Navbar Mobile Optimization */
+    .navbar {
+        padding: 0;
+        z-index: 1000;
+    }
+
+    .navbar .container {
+        padding: 0.75rem 1rem;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .nav-wrapper {
+        width: 100%;
+        gap: 0.5rem;
+        justify-content: space-between;
+    }
+
+    .nav-brand-link {
+        gap: 0.5rem;
+        flex-shrink: 0;
+        min-width: 0;
+    }
+
+    .nav-brand-logo {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+    }
+
+    .college-name {
+        font-size: 0.75rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        gap: 0;
+        border-top: 1px solid rgba(0, 255, 255, 0.2);
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+    }
+
+    .nav-menu li a {
+        display: block;
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .nav-toggle {
+        display: block !important;
+        position: relative !important;
+        right: 0 !important;
+        padding: 0.5rem !important;
+    }
+
+    .hamburger {
+        width: 22px;
+        height: 2px;
+        margin: 5px 0;
+    }
+
+    /* Container Width Mobile Fix */
+    .container {
+        width: 100%;
+        padding: 0 1rem;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .section-container {
+        width: 100%;
+        padding: 0 1rem;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .info-container {
+        width: 100%;
+        padding: 0 1rem;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    /* Typography Mobile Adjustments */
+    h1 {
+        font-size: clamp(1.75rem, 5vw, 2.5rem);
+    }
+
+    h2 {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+    }
+
+    h3 {
+        font-size: clamp(1.25rem, 3vw, 1.5rem);
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+
+    /* Content Section Padding */
+    .college-info-section {
+        padding: 2rem 0;
+    }
+
+    .features-section {
+        padding: 2rem 0;
+    }
+
+    .info-section {
+        padding: 2rem 0;
+    }
+
+    .prize-pool-section {
+        padding: 2rem 0;
+    }
+
+    .countdown-section {
+        padding: 2rem 1rem;
+    }
+
+    .timeline-section {
+        padding: 2rem 0;
+    }
+
+    .coordinators-section {
+        padding: 2rem 0;
+    }
+
+    /* Cards Full Width */
+    .stat-card {
+        padding: 1.5rem 1rem;
+        border-radius: 16px;
+        margin-bottom: 1rem;
+    }
+
+    .feature-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .info-item {
+        padding: 1rem;
+        gap: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .item-icon {
+        width: 45px;
+        height: 45px;
+        min-width: 45px;
+        font-size: 20px;
+    }
+
+    .item-title {
+        font-size: 1rem;
+    }
+
+    .item-main {
+        font-size: 0.95rem;
+    }
+
+    .item-detail {
+        font-size: 0.85rem;
+    }
+
+    /* Timeline Mobile Stack */
+    .timeline {
+        padding-left: 0;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .timeline::after {
+        display: none;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+
+    .timeline-marker {
+        display: none;
+    }
+
+    .timeline-time {
+        width: 100%;
+        text-align: left;
+        padding: 0.75rem 1rem;
+        background: rgba(0, 191, 255, 0.15);
+        border: 1px solid #00bfff;
+        border-radius: 6px;
+        font-size: 0.9rem;
+    }
+
+    .timeline-content {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 8px;
+        font-size: 0.95rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.9rem;
+    }
+
+    /* Grid Layouts Mobile */
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .coordinators-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .prize-pool-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        align-items: stretch;
+    }
+
+    .prize-winner,
+    .prize-runner-up {
+        grid-column: 1 / 2;
+    }
+
+    .prize-runner-up {
+        align-self: stretch;
+    }
+
+    /* Info Panel Mobile */
+    .info-panel {
+        padding: 2rem 1.5rem;
+        border-radius: 16px;
+    }
+
+    .panel-header {
+        margin-bottom: 2rem;
+    }
+
+    .panel-title {
+        font-size: 1.3rem;
+    }
+
+    .panel-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .info-items {
+        gap: 1rem;
+    }
+
+    /* Prize Panel Mobile */
+    .prize-panel {
+        padding: 2rem 1.5rem;
+        border-radius: 16px;
+    }
+
+    .prize-badge {
+        max-width: 100%;
+        padding: 2rem;
+        margin: 1.5rem auto;
+    }
+
+    .prize-amount {
+        font-size: 1.8rem;
+    }
+
+    .prize-rank {
+        font-size: 1.2rem;
+    }
+
+    /* Button Mobile Touch-friendly */
+    .cta-button,
+    .register-button,
+    .register-btn-hero,
+    .register-btn-footer,
+    button,
+    .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.95rem;
+        min-height: 44px;
+        min-width: 44px;
+        border-radius: 8px;
+    }
+
+    /* Hero Section Mobile */
+    .hero-section {
+        min-height: auto;
+        padding: 2rem 0;
+        margin-top: -80px;
+        padding-top: 100px;
+    }
+
+    .hero-container {
+        padding: 0 1rem;
+    }
+
+    .main-title-text {
+        font-size: clamp(2rem, 6vw, 3rem);
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .register-qr-wrapper {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 1.5rem auto;
+    }
+
+    .qr-card-hero {
+        padding: 1rem;
+    }
+
+    .qr-content-hero {
+        width: 120px;
+        height: 120px;
+    }
+
+    .timer-display-hero {
+        padding: 1.5rem 1rem;
+        gap: 0.75rem;
+    }
+
+    .timer-value-hero {
+        font-size: 1.8rem;
+    }
+
+    /* Countdown Mobile */
+    .countdown-timer {
+        padding: 1.5rem 1rem;
+        margin: 2rem auto;
+        gap: 1rem;
+    }
+
+    .countdown-timer-hero {
+        gap: 1rem;
+    }
+
+    .countdown-box {
+        min-width: auto;
+        padding: 1.5rem 1rem;
+    }
+
+    .countdown-value {
+        font-size: 2rem;
+    }
+
+    .countdown-label {
+        font-size: 0.8rem;
+    }
+
+    /* Footer Mobile */
+    footer {
+        padding: 1.5rem 1rem;
+    }
+
+    .footer-content {
+        padding: 0 1rem;
+    }
+
+    .footer-flex {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .footer-location {
+        justify-content: center;
+    }
+
+    .footer-right {
+        text-align: center;
+    }
+
+    /* Event Highlights Mobile */
+    .event-highlights {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .highlight-card {
+        padding: 0.75rem 1rem;
+        gap: 0.75rem;
+    }
+
+    /* Poster Layout Mobile */
+    .poster-layout {
+        padding: 1rem;
+        gap: 1.5rem;
+        min-height: auto;
+    }
+
+    .logo-white-circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .poster-main-logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .poster-main-title {
+        font-size: 1.8rem;
+    }
+
+    /* Brochure Mobile */
+    .circular-brochure-wrapper {
+        max-width: 180px;
+    }
+
+    /* Horizontal Scrolling Fix */
+    .container,
+    .section-container,
+    .info-container {
+        overflow-x: hidden;
+    }
+
+    /* Remove excessive side padding from sections */
+    section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Ensure full width usage */
+    .navbar .container {
+        max-width: 100%;
+        margin: 0;
+        padding: 0.75rem 1rem;
+    }
+
+    .content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Image Scaling */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .hero-section img {
+        width: 100%;
+    }
+
+    /* Modal Mobile */
+    .modal-content {
+        width: 95%;
+        max-width: 100%;
+        padding: 1.5rem;
+        margin: 20% auto;
+    }
+
+    .close-modal {
+        font-size: 24px;
+        top: 10px;
+        right: 10px;
+    }
+
+    /* Sponsors/Gallery Mobile */
+    .sponsors-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* FAQ Mobile */
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-item {
+        border-radius: 8px;
+    }
+
+    .faq-question {
+        padding: 1rem;
+    }
+
+    .faq-question h3 {
+        font-size: 1rem;
+    }
+
+    /* Department Badge Mobile */
+    .department-badge {
+        margin: 2rem auto;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 1.2rem 1rem;
+    }
+
+    .badge-icon {
+        font-size: 1.5rem;
+    }
+
+    .badge-title {
+        font-size: 1rem;
+    }
+
+    .badge-subtitle {
+        font-size: 0.8rem;
+    }
+
+    /* Ensure Navbar Toggle is Clickable */
+    .nav-toggle {
+        z-index: 1001;
+        right: 1rem !important;
+    }
+
+    .nav-toggle.active .hamburger:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .nav-toggle.active .hamburger:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active .hamburger:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra Small Devices */
+    body {
+        padding: 80px 0.75rem 0 0.75rem;
+        font-size: 14px;
+    }
+
+    .container,
+    .section-container,
+    .info-container {
+        padding: 0 0.75rem;
+    }
+
+    h1 {
+        font-size: clamp(1.5rem, 4vw, 2.25rem);
+    }
+
+    h2 {
+        font-size: clamp(1.25rem, 3.5vw, 1.75rem);
+    }
+
+    h3 {
+        font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+    }
+
+    p {
+        font-size: 0.95rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .stat-card {
+        padding: 1.25rem 0.75rem;
+    }
+
+    .info-item {
+        padding: 0.75rem;
+    }
+
+    .item-icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        font-size: 18px;
+    }
+
+    .item-title {
+        font-size: 0.95rem;
+    }
+
+    .item-main {
+        font-size: 0.9rem;
+    }
+
+    .item-detail {
+        font-size: 0.8rem;
+    }
+
+    .timeline-item {
+        padding: 0 0.75rem;
+    }
+
+    .timeline-time {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .timeline-content {
+        padding: 0.75rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 1rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.85rem;
+    }
+
+    .hero-section {
+        padding-top: 100px;
+    }
+
+    .main-title-text {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .timer-value-hero {
+        font-size: 1.5rem;
+    }
+
+    .countdown-value {
+        font-size: 1.6rem;
+    }
+
+    .panel-title {
+        font-size: 1.2rem;
+    }
+
+    .panel-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .prize-amount {
+        font-size: 1.6rem;
+    }
+
+    .prize-rank {
+        font-size: 1.1rem;
+    }
+
+    /* Touch targets minimum 44x44 */
+    button,
+    .btn,
+    a,
+    input,
+    select {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    .college-name {
+        font-size: 0.7rem;
+    }
+
+    .nav-brand-logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .modal-content {
+        width: 100%;
+        margin: 50% auto;
+    }
+
+    .circular-brochure-wrapper {
+        max-width: 150px;
+    }
+
+    .section-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .logo-initials {
+        font-size: 1.2rem;
+    }
+
+    .poster-layout {
+        padding: 0.75rem;
+    }
+
+    .logo-white-circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .poster-main-logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .poster-main-title {
+        font-size: 1.5rem;
+        letter-spacing: 0.5px;
+    }
+
+    footer {
+        padding: 1rem 0.75rem;
+    }
+
+    .footer-content {
+        padding: 0 0.75rem;
+    }
+
+    /* Disable heavy animations on mobile for performance */
+    @media (prefers-reduced-motion: reduce) {
+        * {
+            animation: none !important;
+            transition: none !important;
+        }
+    }
+}
+
+/* Performance: Disable some animations on mobile */
+@media (max-width: 768px) {
+    .gear {
+        animation: none;
+    }
+
+    .data-stream {
+        animation: none;
+        opacity: 0.1;
+    }
+
+    .scan-line {
+        animation: none;
+        opacity: 0.1;
+    }
+
+    .particle {
+        animation: none;
+    }
+
+    .piston-1,
+    .piston-2 {
+        animation: none;
+    }
+
+    .shaft {
+        animation: none;
+    }
+
+    /* Keep essential animations */
+    .stat-card {
+        animation: posterCardFadeIn 0.8s ease-out both !important;
+    }
+
+    .timeline-marker {
+        animation: pulseGlow 2s ease-in-out infinite !important;
+    }
 }
