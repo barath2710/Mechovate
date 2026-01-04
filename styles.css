@@ -2009,34 +2009,54 @@ header {
     }
 
     .timeline-time {
+        /* Container sizing - CRITICAL */
         width: 100% !important;
-        font-size: 1rem !important;
-        font-weight: 900 !important;
-        padding: 0.75rem 1rem !important;
-        margin: 0 !important;
-        margin-bottom: 0 !important;
-        text-align: left !important;
-        color: #ffffff !important;
-        background: linear-gradient(135deg, #0066cc, #0088ff) !important;
-        border: none !important;
-        border-bottom: 3px solid #00ffff !important;
-        border-radius: 8px 8px 0 0 !important;
         display: block !important;
+        box-sizing: border-box !important;
+        
+        /* Text styling - CRITICAL */
+        font-size: 1.1rem !important;
+        font-weight: 900 !important;
+        color: #ffffff !important;
+        text-align: left !important;
+        line-height: 1.6 !important;
+        letter-spacing: 0.5px !important;
+        
+        /* Spacing */
+        margin: 0 !important;
+        padding: 1rem !important;
+        
+        /* Background and visual styling */
+        background: #0055dd !important;
+        border: 2px solid #00ffff !important;
+        border-radius: 8px 8px 0 0 !important;
+        border-bottom: 4px solid #00ffff !important;
+        
+        /* Text rendering - CRITICAL */
         visibility: visible !important;
         opacity: 1 !important;
+        text-rendering: geometricPrecision !important;
+        -webkit-font-smoothing: subpixel-antialiased !important;
+        -moz-osx-font-smoothing: auto !important;
+        
+        /* Positioning */
         position: relative !important;
+        order: 1 !important;
+        z-index: 5 !important;
+        
+        /* Prevent text clipping - CRITICAL */
         overflow: visible !important;
         white-space: normal !important;
         word-wrap: break-word !important;
-        text-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 255, 255, 0.6) !important;
-        box-shadow: 0 2px 8px rgba(0, 191, 255, 0.4) !important;
-        order: 1 !important;
-        line-height: 1.5 !important;
-        min-height: 3rem !important;
+        word-break: break-word !important;
+        
+        /* Box height - CRITICAL */
+        min-height: 3.5rem !important;
         height: auto !important;
-        letter-spacing: 0.5px !important;
-        z-index: 10 !important;
-        font-family: Arial, sans-serif !important;
+        
+        /* Visual effects */
+        box-shadow: 0 4px 12px rgba(0, 85, 221, 0.5) !important;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) !important;
     }
 
     .timeline-content {
@@ -2113,31 +2133,55 @@ header {
     }
 
     .timeline-time {
+        /* Container sizing - CRITICAL */
         width: 100% !important;
-        font-size: 0.95rem !important;
-        font-weight: 900 !important;
-        padding: 0.7rem 0.9rem !important;
-        margin: 0 !important;
-        margin-bottom: 0 !important;
-        text-align: left !important;
-        color: #ffffff !important;
-        background: linear-gradient(135deg, #0066cc, #0088ff) !important;
-        border: none !important;
-        border-bottom: 3px solid #00ffff !important;
-        border-radius: 8px 8px 0 0 !important;
         display: block !important;
+        box-sizing: border-box !important;
+        
+        /* Text styling - CRITICAL */
+        font-size: 1rem !important;
+        font-weight: 900 !important;
+        color: #ffffff !important;
+        text-align: left !important;
+        line-height: 1.6 !important;
+        letter-spacing: 0.5px !important;
+        
+        /* Spacing */
+        margin: 0 !important;
+        padding: 0.9rem !important;
+        
+        /* Background and visual styling */
+        background: #0055dd !important;
+        border: 2px solid #00ffff !important;
+        border-radius: 8px 8px 0 0 !important;
+        border-bottom: 4px solid #00ffff !important;
+        
+        /* Text rendering - CRITICAL */
         visibility: visible !important;
         opacity: 1 !important;
+        text-rendering: geometricPrecision !important;
+        -webkit-font-smoothing: subpixel-antialiased !important;
+        -moz-osx-font-smoothing: auto !important;
+        
+        /* Positioning */
         position: relative !important;
+        order: 1 !important;
+        z-index: 5 !important;
+        
+        /* Prevent text clipping - CRITICAL */
         overflow: visible !important;
         white-space: normal !important;
         word-wrap: break-word !important;
-        text-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 255, 255, 0.6) !important;
-        box-shadow: 0 2px 8px rgba(0, 191, 255, 0.4) !important;
-        order: 1 !important;
-        line-height: 1.5 !important;
-        min-height: 2.8rem !important;
+        word-break: break-word !important;
+        
+        /* Box height - CRITICAL */
+        min-height: 3.2rem !important;
         height: auto !important;
+        
+        /* Visual effects */
+        box-shadow: 0 4px 12px rgba(0, 85, 221, 0.5) !important;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) !important;
+    }
         letter-spacing: 0.5px !important;
         text-rendering: optimizeLegibility !important;
         -webkit-font-smoothing: antialiased !important;
