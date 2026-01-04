@@ -1,14 +1,791 @@
-<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mechovate Hackathon</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MECHOVATE 1.0 - Mechanical Engineering Hackathon</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&family=Righteous&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Video -->
+    <video class="background-video" autoplay muted loop>
+        <source src="images/background video.mp4" type="video/mp4">
+    </video>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <!-- Logo + College Name (Left) -->
+                <a href="#home" class="nav-brand-link">
+                    <div class="nav-brand-logo">
+                        <img src="images/st jo.png" alt="St. Joseph's College of Engineering" class="college-logo">
+                    </div>
+                    <div class="nav-brand-text">
+                        <span class="college-name">St. Joseph's College of Engineering</span>
+                    </div>
+                </a>
+
+                <!-- Menu Items (Right) -->
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#brochure" class="nav-link">Brochure</a></li>
+                    <li><a href="#timeline" class="nav-link">Timeline</a></li>
+                    <li><a href="#guidelines" class="nav-link">Guidelines</a></li>
+                    <li><a href="#prize-pool" class="nav-link">Prizes</a></li>
+                    <li><a href="#registrationModal" class="nav-link register-link">Register</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Content Container -->
+    <div class="content">
+        <!-- St. Joseph's College Information Section - HIDDEN -->
+        <section id="about" class="college-info-section" style="display: none;">
+            <div class="section-container">
+                <div class="section-content">
+                    <div class="section-header">
+                        <div class="logo-flex">
+                            <div class="section-logo">
+                                <img src="images/st jo.png" alt="St. Joseph's College" onerror="this.style.display='none';">
+                            </div>
+                            <div class="section-title">
+                                <h2 class="college-title">St. Joseph's College of Engineering</h2>
+                            </div>
+                        </div>
+                        <div class="title-decoration"></div>
+                    </div>
+
+                    <div class="stats-grid">
+                        <!-- College Stats -->
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <img src="images/32 img.png" alt="32" class="stat-number" onerror="this.style.display='none';">
+                            </div>
+                            <h3 class="stat-title">Years of Excellence</h3>
+                            <p class="stat-subtitle">Established in 1994</p>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <img src="images/anna.png" alt="Anna University" class="stat-icon-img" onerror="this.style.display='none';">
+                            </div>
+                            <h3 class="stat-title">Autonomous Institution</h3>
+                            <p class="stat-subtitle">Anna University Affiliation</p>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <img src="images/a++.png" alt="A+" class="stat-grade" onerror="this.style.display='none';">
+                            </div>
+                            <h3 class="stat-title">NAAC Accreditation</h3>
+                            <p class="stat-subtitle">Highest Rating</p>
+                        </div>
+                    </div>
+
+                    <!-- College Description -->
+                    <div class="description-section">
+                        <p class="description-text">
+                            St. Joseph's College of Engineering stands as a beacon of technical excellence, fostering innovation and nurturing future engineers.
+                            With over three decades of legacy, we continue to shape minds and build careers through cutting-edge education and industry-relevant skills.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <!-- Mechanical Background Animations -->
+            <div class="mechanical-bg-overlay">
+                <!-- Rotating Gears -->
+                <svg class="gear gear-1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="35" fill="none" stroke="rgba(0,255,255,0.1)" stroke-width="2"/>
+                    <circle cx="50" cy="50" r="30" fill="none" stroke="rgba(0,255,255,0.08)" stroke-width="1.5"/>
+                    <circle cx="50" cy="50" r="15" fill="none" stroke="rgba(0,255,255,0.1)" stroke-width="1"/>
+                </svg>
+                <svg class="gear gear-2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(0,191,255,0.08)" stroke-width="2"/>
+                    <path d="M50,10 L55,35 L50,40 L45,35 Z" fill="rgba(0,255,255,0.08)"/>
+                </svg>
+                <svg class="gear gear-3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(0,200,255,0.06)" stroke-width="1.5"/>
+                </svg>
+
+                <!-- Blueprint Grid Lines -->
+                <div class="blueprint-lines">
+                    <div class="blueprint-line-h"></div>
+                    <div class="blueprint-line-v"></div>
+                </div>
+
+                <!-- Mechanical Particles -->
+                <div class="particle particle-1"></div>
+                <div class="particle particle-2"></div>
+                <div class="particle particle-3"></div>
+            </div>
+
+            <div class="hero-container">
+                <div class="hero-content">
+                    <!-- Department Name -->
+                    <div class="department-name">
+                        <p>DEPARTMENT OF MECHANICAL ENGINEERING</p>
+                    </div>
+
+                    <!-- MECHOVATE 1.0 Image -->
+                    <div class="mechovate-image-container">
+                        <img src="images/name.png" alt="MECHOVATE 1.0" class="mechovate-main-image">
+                    </div>
+
+                    <p class="hero-subtitle">A 24 HR NATIONAL LEVEL HACKATHON</p>
+
+                    <!-- Register Button -->
+                    <div class="register-qr-wrapper">
+                        <button class="register-btn-hero register-link" data-form-url="">
+                            REGISTER NOW
+                        </button>
+                    </div>
+
+                    <!-- Countdown Timer -->
+                    <div class="countdown-timer-hero">
+                        <div class="timer-label">EVENT STARTS IN</div>
+                        <div class="timer-display-hero">
+                            <div class="timer-unit-hero">
+                                <div class="timer-value-hero" id="days">00</div>
+                                <div class="timer-label-small-hero">DAYS</div>
+                            </div>
+                            <div class="timer-separator-hero">:</div>
+                            <div class="timer-unit-hero">
+                                <div class="timer-value-hero" id="hours">00</div>
+                                <div class="timer-label-small-hero">HOURS</div>
+                            </div>
+                            <div class="timer-separator-hero">:</div>
+                            <div class="timer-unit-hero">
+                                <div class="timer-value-hero" id="minutes">00</div>
+                                <div class="timer-label-small-hero">MINS</div>
+                            </div>
+                            <div class="timer-separator-hero">:</div>
+                            <div class="timer-unit-hero">
+                                <div class="timer-value-hero" id="seconds">00</div>
+                                <div class="timer-label-small-hero">SECS</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-description">
+                        <p>MECHOVATE 1.0 is a prestigious national-level hackathon dedicated to advancing mechanical engineering innovation. Participants will tackle real-world engineering challenges, collaborate across multidisciplinary teams, and develop transformative solutions using cutting-edge technology and engineering principles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="features-container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="card-content">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                            <h3 class="card-title">24 HOURS</h3>
+                            <p class="card-subtitle">CHALLENGE</p>
+                            <p class="card-description">Non-stop innovation sprint</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="card-content">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M6 4h12v2H6V4zm0 14h12v2H6v-2zm14-6H4v2h16v-2zM6 4h12v2H6V4zm0 14h12v2H6v-2zm14-6H4v2h16v-2z"/>
+                                    <circle cx="8.5" cy="9.5" r="1.5"/>
+                                    <circle cx="15.5" cy="9.5" r="1.5"/>
+                                    <circle cx="8.5" cy="14.5" r="1.5"/>
+                                    <circle cx="15.5" cy="14.5" r="1.5"/>
+                                </svg>
+                            </div>
+                            <h3 class="card-title">5+ DOMAINS</h3>
+                            <p class="card-subtitle">50+ PROBLEM STATEMENT</p>
+                            <p class="card-description">Diverse engineering challenges</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="card-content">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/>
+                                </svg>
+                            </div>
+                            <h3 class="card-title">FEBRUARY</h3>
+                            <p class="card-subtitle">26TH & 27TH</p>
+                            <p class="card-description">Mark your calendars</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Circular Brochure Section - Highlight Hero -->
+        <section class="circular-brochure-section" id="brochure">
+            <div class="brochure-container">
+                <h2 class="brochure-title">EVENT BROCHURE</h2>
+                <div class="circular-brochure-wrapper">
+                    <img src="images/poster.jpeg?v=1" alt="MECHOVATE 1.0 Brochure" class="circular-brochure-image" id="brochureImageMain" onerror="showCircularFallback()" loading="lazy">
+                    <div class="brochure-shine"></div>
+                </div>
+                <div class="brochure-actions">
+                    <button type="button" class="brochure-btn view-btn" id="viewBtn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                        </svg>
+                        VIEW FULLSCREEN
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timeline" class="timeline-section">
+            <div class="container">
+                <h2 class="section-title">Event Timeline</h2>
+                <div class="timeline">
+                    <div class="timeline-day-header">Day 1 - February 26, 2026</div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-time">7:50 AM</div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Arrival Of Students</h3>
+                            <p>Students arrive, check in, and get ready to build.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">08:00 AM</div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Registration Starts</h3>
+                            <p>Students register their team presence and confirm participation.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">09:00 AM</div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Hacking Begins</h3>
+                            <p>24-hour innovation challenge officially starts. Teams begin ideation, design, and development.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">01:00 PM</div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Lunch Break</h3>
+                            <p>Networking lunch with refreshments. Teams continue working while maintaining energy levels.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">03:00 PM</div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>First Round Of Evaluation Starts</h3>
+                            <p>First progress evaluation. Evaluators provide technical guidance and strategic feedback.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">08:00 PM</div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Dinner Break</h3>
+                            <p>Evening meal service. Teams regroup and plan overnight development strategy.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-day-header">Night - Continuous Hacking</div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">12:00 AM</div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Midnight Snacks & Energy Boost</h3>
+                            <p>Coffee, snacks, and refreshments to fuel the night shift. Keep the momentum going!</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-day-header">Day 2 - February 27, 2026</div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">08:00 AM</div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Breakfast</h3>
+                            <p>Morning refreshments to recharge for final sprint and presentation preparation.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">09:00 AM</div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Final Round Of Evaluation Starts</h3>
+                            <p>Teams present their solutions to the judging panel. Live demonstrations and Q&A sessions</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">03:00 PM</div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Valedictory Ceremony</h3>
+                            <p>Winner announcement, prize distribution, and internship offer presentations.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Brochure Fullscreen Modal -->
+        <div id="brochureModal" class="brochure-modal">
+            <div class="brochure-modal-content">
+                <button class="modal-close" id="modalClose">&times;</button>
+                <img src="images/poster.jpeg" alt="MECHOVATE 1.0 Brochure - Fullscreen" class="modal-image" id="brochureImage" onerror="showFallbackBrochure()">
+                <div id="fallbackBrochure" class="fallback-brochure">
+                    <h1>MECHOVATE 1.0</h1>
+                    <p>Mechanical Engineering Hackathon</p>
+                    <p>February 26-27, 2026</p>
+                    <p>St. Joseph's College of Engineering</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Guidelines Section -->
+        <section id="guidelines" class="info-section">
+            <div class="info-container">
+                <div class="info-content">
+                    <div class="info-grid">
+                        <!-- Information Section -->
+                        <div class="info-panel">
+                            <div class="panel-header">
+                                <div class="header-line"></div>
+                                <div class="header-content">
+                                    <h3 class="panel-title">GUIDELINES</h3>
+                                    <p class="panel-subtitle">Event Rules & Requirements</p>
+                                </div>
+                            </div>
+
+                            <div class="info-items">
+                                <div class="info-item">
+                                    <div class="item-icon">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A2.01 2.01 0 0 0 18.06 7H15V4c0-1.11-.89-2-2-2H9c-1.11 0-2 .89-2 2v3H3.94c-.74 0-1.41.41-1.75 1.04L.5 12.5H3v6c0 1.11.89 2 2 2h3c1.11 0 2-.89 2-2v-2h4v2c0 1.11.89 2 2 2h3c1.11 0 2-.89 2-2z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="item-content">
+                                        <h4 class="item-title">Team Composition</h4>
+                                        <p class="item-main">3 - 6 members per team</p>
+                                        <p class="item-detail">Form your dream team</p>
+                                    </div>
+                                    <div class="item-arrow">→</div>
+                                </div>
+
+                                <div class="info-item">
+                                    <div class="item-icon">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="item-content">
+                                        <h4 class="item-title">Internship Opportunities</h4>
+                                        <p class="item-main">Exclusive offers for top teams</p>
+                                        <p class="item-detail">Industry partnerships awaiting</p>
+                                    </div>
+                                    <div class="item-arrow">→</div>
+                                </div>
+
+                                <div class="info-item">
+                                    <div class="item-icon">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="item-content">
+                                        <h4 class="item-title">Registration Deadline</h4>
+                                        <p class="item-main">February 10, 2026</p>
+                                        <p class="item-detail">Don't miss your chance</p>
+                                    </div>
+                                    <div class="item-arrow">→</div>
+                                </div>
+
+                                <div class="info-item">
+                                    <div class="item-icon">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="item-content">
+                                        <h4 class="item-title">Event Venue</h4>
+                                        <p class="item-main">Hackathon & Training Centre</p>
+                                        <p class="item-detail">State-of-the-art facility</p>
+                                    </div>
+                                    <div class="item-arrow">→</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prize Pool Section -->
+        <section id="prize-pool" class="prize-pool-section">
+            <div class="prize-pool-container">
+                <h2 class="prize-pool-title">PRIZE POOL</h2>
+                <p class="prize-pool-subtitle">Compete & Win Amazing Rewards</p>
+                
+                <div class="prize-pool-content">
+                    <!-- 1st Prize - Winner -->
+                    <div class="prize-card prize-winner">
+                        <div class="prize-position">
+                            <span class="position-badge">🥇</span>
+                            <h3 class="prize-rank">1st Prize</h3>
+                            <p class="prize-title-text">Winner</p>
+                        </div>
+                        <div class="prize-details">
+                            <p class="prize-amount">₹10,000</p>
+                        </div>
+                    </div>
+
+                    <!-- 2nd Prize - Runner-up -->
+                    <div class="prize-card prize-runner-up">
+                        <div class="prize-position">
+                            <span class="position-badge">🥈</span>
+                            <h3 class="prize-rank">2nd Prize</h3>
+                            <p class="prize-title-text">Runner-up</p>
+                        </div>
+                        <div class="prize-details">
+                            <p class="prize-amount">₹5,000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coordinators Section -->
+        <section id="contact" class="coordinators-section">
+            <div class="coordinators-container">
+                <h2 class="coordinators-title">
+                    <span class="title-gradient">MEET THE TEAM</span>
+                </h2>
+
+                <div class="coordinators-grid">
+                    <!-- Staff Coordinators -->
+                    <div class="coordinator-panel">
+                        <div class="panel-content">
+                            <div class="panel-header">
+                                <div class="panel-line"></div>
+                                <div class="panel-title-section">
+                                    <svg class="panel-icon" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A2.01 2.01 0 0 0 18.06 7H15V4c0-1.11-.89-2-2-2H9c-1.11 0-2 .89-2 2v3H3.94c-.74 0-1.41.41-1.75 1.04L.5 12.5H3v6c0 1.11.89 2 2 2h3c1.11 0 2-.89 2-2v-2h4v2c0 1.11.89 2 2 2h3c1.11 0 2-.89 2-2z"/>
+                                    </svg>
+                                    <h3 class="panel-title">STAFF COORDINATORS</h3>
+                                </div>
+                                <div class="panel-decoration"></div>
+                            </div>
+
+                            <div class="coordinator-list">
+                                <div class="coordinator-item">
+                                    <div class="coordinator-index">1</div>
+                                    <div class="coordinator-info">
+                                        <h4 class="coordinator-name">DR.K.M.KUMAR</h4>
+                                        <div class="coordinator-contact">
+                                            <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                            </svg>
+                                            <span class="contact-number">+91 94456 83372</span>
+                                        </div>
+                                    </div>
+                                    <svg class="coordinator-arrow" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                                    </svg>
+                                </div>
+
+                                <div class="coordinator-item">
+                                    <div class="coordinator-index">2</div>
+                                    <div class="coordinator-info">
+                                        <h4 class="coordinator-name">DR.K.ARUN</h4>
+                                        <div class="coordinator-contact">
+                                            <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                            </svg>
+                                            <span class="contact-number">+91 98945 49805</span>
+                                        </div>
+                                    </div>
+                                    <svg class="coordinator-arrow" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                                    </svg>
+                                </div>
+
+                                <div class="coordinator-item">
+                                    <div class="coordinator-index">3</div>
+                                    <div class="coordinator-info">
+                                        <h4 class="coordinator-name">MR.N.SATHISH KUMAR</h4>
+                                        <div class="coordinator-contact">
+                                            <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                            </svg>
+                                            <span class="contact-number">+91 90952 35577</span>
+                                        </div>
+                                    </div>
+                                    <svg class="coordinator-arrow" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                                    </svg>
+                                </div>
+
+                                <div class="coordinator-item">
+                                    <div class="coordinator-index">4</div>
+                                    <div class="coordinator-info">
+                                        <h4 class="coordinator-name">MR.K.GNANASEKARAN</h4>
+                                        <div class="coordinator-contact">
+                                            <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                            </svg>
+                                            <span class="contact-number">+91 91763 17179</span>
+                                        </div>
+                                    </div>
+                                    <svg class="coordinator-arrow" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Student Coordinators -->
+                    <div class="coordinator-panel">
+                        <div class="panel-content">
+                            <div class="panel-header">
+                                <div class="panel-line"></div>
+                                <div class="panel-title-section">
+                                    <svg class="panel-icon" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <h3 class="panel-title">STUDENT COORDINATORS</h3>
+                                </div>
+                                <div class="panel-decoration"></div>
+                            </div>
+
+                            <div class="coordinator-list">
+                                <div class="coordinator-item">
+                                    <div class="coordinator-index">1</div>
+                                    <div class="coordinator-info">
+                                        <h4 class="coordinator-name">HARISH J</h4>
+                                        <div class="coordinator-contact">
+                                            <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                            </svg>
+                                            <span class="contact-number">+91 98765 43210</span>
+                                        </div>
+                                    </div>
+                                    <svg class="coordinator-arrow" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                                    </svg>
+                                </div>
+
+                                <div class="coordinator-item">
+                                    <div class="coordinator-index">2</div>
+                                    <div class="coordinator-info">
+                                        <h4 class="coordinator-name">JAI AKASH LAL A</h4>
+                                        <div class="coordinator-contact">
+                                            <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                            </svg>
+                                            <span class="contact-number">+91 98765 43211</span>
+                                        </div>
+                                    </div>
+                                    <svg class="coordinator-arrow" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="footer-bottom">
+                <p class="footer-copyright">St. Joseph's College of Engineering</p>
+                <p class="footer-website">
+                    <a href="https://stjosephs.ac.in/" target="_blank" class="footer-link">www.stjosephs.ac.in</a>
+                    <span class="footer-separator">|</span>
+                    <a href="https://www.instagram.com/mechovate_1.0" target="_blank" class="footer-link">@mechovate_1.0</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <script src="script.js"></script>
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                
+                // If it's a register link, let the modal JS handle it
+                if (this.classList.contains('register-link')) {
+                    return; // Don't prevent default here, let modal JS handle
+                }
+                
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile navigation toggle
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                navToggle.classList.toggle('active');
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                    navMenu.classList.remove('active');
+                    navToggle.classList.remove('active');
+                }
+            });
+
+            // Close menu when clicking a nav link
+            navMenu.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') {
+                    navMenu.classList.remove('active');
+                    navToggle.classList.remove('active');
+                }
+            });
+        }
+
+        // Modal functionality - Redirect to Google Form instead
+        const modal = document.getElementById('registrationModal');
+        const closeBtn = document.querySelector('.close');
+        const modalBtn = document.querySelector('.modal-btn');
+
+        if (modal) {
+            // Redirect to Google Form when clicking register link
+            document.querySelectorAll('.register-link').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    // Open Google Form directly
+                    window.open('https://forms.gle/Y1KyWAG7v9MdwnLq6', '_blank');
+                });
+            });
+
+            // INDEPENDENT NAVIGATION HANDLERS FOR GUIDELINES AND PRIZES
+            // Prevent overlap issues by explicitly handling scroll to each section
+            document.querySelectorAll('a[href="#brochure"]').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const brochureSection = document.getElementById('brochure');
+                    if (brochureSection) {
+                        brochureSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        // Adjust for fixed navbar
+                        setTimeout(() => {
+                            window.scrollBy(0, -120);
+                        }, 500);
+                    }
+                });
+            });
+
+            document.querySelectorAll('a[href="#guidelines"]').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const guidelinesSection = document.getElementById('guidelines');
+                    if (guidelinesSection) {
+                        guidelinesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        // Adjust for fixed navbar
+                        setTimeout(() => {
+                            window.scrollBy(0, -120);
+                        }, 500);
+                    }
+                });
+            });
+
+            document.querySelectorAll('a[href="#prize-pool"]').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const prizePoolSection = document.getElementById('prize-pool');
+                    if (prizePoolSection) {
+                        prizePoolSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        // Adjust for fixed navbar
+                        setTimeout(() => {
+                            window.scrollBy(0, -120);
+                        }, 500);
+                    }
+                });
+            });
+
+            // Close modal
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => {
+                    modal.style.display = 'none';
+                });
+            }
+
+            if (modalBtn) {
+                modalBtn.addEventListener('click', () => {
+                    modal.style.display = 'none';
+                });
+            }
+
+            // Close modal when clicking outside
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        }
+// ========================================
+        // OLD BROCHURE CODE REMOVED - USING MODAL INSTEAD
+        // ========================================
+    </script>
+</body>
 </html>
