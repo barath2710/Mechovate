@@ -2019,8 +2019,7 @@ header {
         margin: 0;
         background: linear-gradient(135deg, rgba(0, 100, 200, 0.08) 0%, rgba(0, 150, 255, 0.04) 100%);
         border: 1px solid rgba(0, 180, 255, 0.3);
-        border-radius: 0 0 8px 8px;
-        order: 2;
+        border-radius: 8px;
     }
 
     .timeline-content h3 {
@@ -2097,8 +2096,7 @@ header {
         margin: 0;
         background: rgba(0, 100, 200, 0.06);
         border: 1px solid rgba(0, 180, 255, 0.25);
-        border-radius: 0 0 8px 8px;
-        order: 2;
+        border-radius: 8px;
     }
 
     .timeline-content h3 {
