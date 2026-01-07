@@ -1971,6 +1971,70 @@ header {
     margin: 0;
 }
 
+/* ================================================
+   SPONSOR SECTION
+   ================================================ */
+.sponsor-section {
+    padding: 80px 20px 60px;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.sponsor-container {
+    max-width: 580px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 30px;
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.06) 0%, rgba(0, 191, 255, 0.03) 100%);
+    border: 1px solid rgba(0, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.sponsor-logo-wrapper {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 360px;
+    padding: 0;
+    border: none;
+}
+
+.sponsor-logo {
+    max-width: 520px;
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.1));
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.sponsor-logo:hover {
+    filter: drop-shadow(0 0 25px rgba(0, 255, 255, 0.25));
+    transform: scale(1.02);
+}
+
+.sponsor-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #00ffff 0%, #00e5ff 50%, #0088ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 0.8px;
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    text-transform: uppercase;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .timeline-section .container {
@@ -2048,6 +2112,29 @@ header {
     .timeline-day-header::after {
         display: none;
     }
+
+    .sponsor-section {
+        padding: 60px 20px 50px;
+    }
+
+    .sponsor-container {
+        max-width: 520px;
+        padding: 35px 25px;
+    }
+
+    .sponsor-logo-wrapper {
+        min-height: 300px;
+        margin-bottom: 1.2rem;
+        padding: 0;
+    }
+
+    .sponsor-logo {
+        max-width: 420px;
+    }
+
+    .sponsor-text {
+        font-size: 1.1rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2119,6 +2206,28 @@ header {
         margin: 1.2rem 0 0.8rem;
         padding-left: 0;
         color: #00bfff;
+    }
+    .sponsor-section {
+        padding: 50px 15px 40px;
+    }
+
+    .sponsor-container {
+        max-width: 100%;
+        padding: 30px 20px;
+    }
+
+    .sponsor-logo-wrapper {
+        min-height: 240px;
+        margin-bottom: 1rem;
+        padding: 0;
+    }
+
+    .sponsor-logo {
+        max-width: 90%;
+    }
+
+    .sponsor-text {
+        font-size: 0.95rem;
     }
 }
 
@@ -7991,4 +8100,39 @@ select:hover,
     .timeline-marker {
         animation: pulseGlow 2s ease-in-out infinite !important;
     }
+}
+
+/* ================================================
+   SPONSOR SECTION - ISOLATION & OVERRIDES
+   ================================================ */
+.sponsor-section {
+    isolation: isolate !important;
+}
+
+.sponsor-section img {
+    border: none !important;
+    outline: none !important;
+}
+
+.sponsor-logo {
+    width: 520px !important;
+    max-width: 90% !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.sponsor-logo-wrapper {
+    margin-bottom: 8px !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: none !important;
+}
+
+.sponsor-container {
+    border: 1px solid rgba(0, 255, 255, 0.15) !important;
+    border-radius: 16px !important;
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.06) 0%, rgba(0, 191, 255, 0.03) 100%) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.1) !important;
 }
